@@ -1,0 +1,15 @@
+Tehtävä 0.6
+
+```mermaid
+sequenceDiagram
+    participant browser as Browser
+    participant server as Server
+
+    Note right of browser: Note is added to list, then sent to the server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    Note left of server: Server handles request, saves submitted data.
+
+    server-->>browser: 201 created
+
+```
