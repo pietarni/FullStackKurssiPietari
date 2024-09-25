@@ -4,10 +4,10 @@ sequenceDiagram
     participant server as Server
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Note right of server: Server handles request, saves submitted data.
+    Note left of server: Server handles request, saves submitted data.
 
     server-->>browser: 302 - /exampleapp/notes
-    Note right of server: Returns 302 to make browser redirect to to /exampleapp/notes - in this case it makes the browser refresh the page.
+    Note left of server: Returns 302 to make browser redirect to to /exampleapp/notes - in this case it makes the browser refresh the page.
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     Note right of browser: This request refreshes the page
